@@ -1,0 +1,16 @@
+[project]
+name = "LearningPGZ"
+version = "2025.1.0"
+dependencies = [
+  "pgzero",
+  "pygame"
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Geoff Matheson", email = "geoff.matheson@education.vic.gov.au"},
+]
+
+[tool.ruff]
+builtins = ["_", "Actor", "screen", "keyboard", "animate", "Rect", "ZRect", "images", "sounds", "mouse", "keys", "keymods", "exit", "clock", "music"]
+# List of builtins to be ignored
+ignore = ["F821"]  # Ignore undefined name errors

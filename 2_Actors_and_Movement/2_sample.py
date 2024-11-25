@@ -18,12 +18,13 @@ def update():
     if keyboard.right:
         player.x += 5
 
+
     # TODO: Add code to move the player up or down if the up or down arrow keys are pressed
 
 
 def draw():
     # Set the background color before drawing the player
-    screen.fill(BGCOLOUR)
+    screen.fill(BGCOLOUR) 
     player.draw()
 
 pgzrun.go()

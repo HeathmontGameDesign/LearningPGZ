@@ -1,0 +1,10 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUndefinedVariable": "none",
+        "reportMissingImports": "none"
+    }
+}

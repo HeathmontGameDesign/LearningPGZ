@@ -1,13 +1,13 @@
 import pgzrun
 
-# Set the size of the screen
+# Set the size of the screen and the Title
 WIDTH = 800
 HEIGHT = 600
 TITLE = "Drawing to the screen"
 
-# Colours (RGB)
+# Colours (RGB) - Constants
 WHITE = (255, 255, 255)
-RED = (128, 0, 0)
+RED = (180, 0, 0)
 BLUE = (0, 0, 255)
 GREEN = (0, 170, 0)
 YELLOW = (255, 255, 0)
@@ -27,7 +27,7 @@ def draw():
 
     #TODO: Add a filled in blue circle in the top right corner
 
-    # TODO: Add a green rectangle that covers the left hand side of the screen
+    #TODO: Add a green rectangle that covers the left hand side of the screen
     
 
 def update():
