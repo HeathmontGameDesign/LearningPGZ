@@ -30,6 +30,7 @@ def update():
     # Check for collision with the obstacle
     if heath.colliderect(obstacle):
         print("Collision detected!")
+        obstacle.x, obstacle.y = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
 
 def draw():
     # Set the background color before drawing the actors
