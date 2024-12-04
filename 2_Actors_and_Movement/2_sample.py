@@ -1,6 +1,5 @@
 import pgzrun
 
-
 # Set the size of the screen
 WIDTH = 800
 HEIGHT = 600
