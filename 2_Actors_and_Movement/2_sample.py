@@ -4,6 +4,8 @@ import pgzrun
 WIDTH = 800
 HEIGHT = 600
 
+TITLE = '2 - Actors and Movement'
+
 # Set the background color
 BGCOLOUR = (0, 0, 160)
 

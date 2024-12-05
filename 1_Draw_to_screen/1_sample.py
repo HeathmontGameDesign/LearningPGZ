@@ -3,7 +3,7 @@ import pgzrun
 # Set the size of the screen and the Title
 WIDTH = 800
 HEIGHT = 600
-TITLE = "Drawing to the screen"
+TITLE = "1 - Drawing to the screen"
 
 # Colours (RGB) - Constants
 WHITE = (255, 255, 255)
