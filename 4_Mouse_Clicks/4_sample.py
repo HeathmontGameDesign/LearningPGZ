@@ -9,8 +9,9 @@ TITLE = '4 - Mouse Clicks'
 
 BGCOLOUR = (255, 200, 0)
 
-heath_speed = 5
+heath_speed = 15
 
+# GLOBAL VARIABLES
 # Create the heath actor and place it at a random position
 heath = Actor('heath', (random.randint(0, WIDTH), random.randint(0, HEIGHT)))
 # Create the cross actor and place it off the screen
@@ -47,10 +48,12 @@ def on_mouse_down(pos):
     # TODO: Add code to check for collision with Heath. If there is a collision, increase the score by 1
     # and change the cross image to a tick. If there is not a collision, decrease the score by 1 and
     # make the cross image a cross.
-    clock.schedule(hide_cross, 0.5)
+    
+    # This schedules the "hide_cross" function to run in 0.5 seconds, so that the cross doesn't stay on the screen.
+    clock.schedule_unique(hide_cross, 0.5)
 
+# hide_cross moves the cross off the screen
 def hide_cross():
-    # This code moves the cross off screen after 0.5 seconds. 
     cross.pos = (-50, -50)
 
 pgzrun.go()

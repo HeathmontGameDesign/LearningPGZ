@@ -25,7 +25,10 @@ def draw():
     # Add a yellow line from the top left to the bottom right
     screen.draw.line((0, 0), (800, 600), YELLOW)
 
-    #TODO: Add a filled in blue circle in the top right corner
+    # Write some text in the bottom right corner
+    screen.draw.text("Hello, World!", (700, 550), color=WHITE, fontsize=40)
+
+    #TODO: Add a large filled in blue circle in the top right corner
 
     #TODO: Add a green rectangle that covers the left hand side of the screen
     
