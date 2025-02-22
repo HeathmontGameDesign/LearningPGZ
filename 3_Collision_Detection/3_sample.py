@@ -1,3 +1,4 @@
+# Importing the Pygame Zero and random modules
 import pgzrun
 import random
 
@@ -22,7 +23,6 @@ fire_1 = Actor('fire', (random.randint(0, WIDTH), 300))
 fire_2 = Actor('fire', (400, random.randint(0, HEIGHT)))
 
 
-
 def update():
     # Move the heath actor left or right if the left or right arrow keys are pressed
     if keyboard.left:
@@ -40,7 +40,7 @@ def update():
     if heath.colliderect(coin):
         coin.x, coin.y = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
 
-    # TODO: Add code to check for collision with the fire obstacles
+    # TODO: Add code to check for collision with the fire obstacles (fire_1 and fire_2)
 
     # TODO: Add code to stop Heath going off the screen
 

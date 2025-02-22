@@ -9,7 +9,7 @@ TITLE = '4 - Mouse Clicks'
 
 BGCOLOUR = (255, 200, 0)
 
-heath_speed = 15
+HEATH_SPEED = 20
 
 # GLOBAL VARIABLES
 # Create the heath actor and place it at a random position
@@ -20,9 +20,9 @@ cross = Actor('cross', (-50, -50))
 score = 0
 
 def update():
-    # Make Heath move randomly
-    move_x = random.choice([heath_speed, -heath_speed])
-    move_y = random.choice([heath_speed, -heath_speed])
+    # Heath moves HEATH_SPEED pixels in a random direction
+    move_x = random.choice([HEATH_SPEED, -HEATH_SPEED])
+    move_y = random.choice([HEATH_SPEED, -HEATH_SPEED])
     heath.x += move_x
     heath.y += move_y
 
@@ -43,6 +43,8 @@ def draw():
     # TODO: Draw the score
 
 def on_mouse_down(pos):
+    # Set the position of the cross to the position of the mouse click
+    # TODO: Delete this line (or move it to the right spot inside your if, elif, else statement)
     cross.pos = pos
     
     # TODO: Add code to check for collision with Heath. If there is a collision, increase the score by 1
