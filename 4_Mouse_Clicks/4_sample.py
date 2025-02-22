@@ -20,6 +20,8 @@ cross = Actor('cross', (-50, -50))
 score = 0
 
 def update():
+    # Because we want to use a simple variable (score) across multiple functions, we need to declare it as global
+    global score
     # Heath moves HEATH_SPEED pixels in a random direction
     move_x = random.choice([HEATH_SPEED, -HEATH_SPEED])
     move_y = random.choice([HEATH_SPEED, -HEATH_SPEED])
@@ -37,6 +39,9 @@ def update():
         heath.bottom = random.randint(0, HEIGHT)
 
 def draw():
+    # As above, score is being used as a global variable
+    global score
+
     screen.fill(BGCOLOUR)
     heath.draw()
     cross.draw()
@@ -44,7 +49,6 @@ def draw():
 
 def on_mouse_down(pos):
     # Set the position of the cross to the position of the mouse click
-    # TODO: Delete this line (or move it to the right spot inside your if, elif, else statement)
     cross.pos = pos
     
     # TODO: Add code to check for collision with Heath. If there is a collision, increase the score by 1
