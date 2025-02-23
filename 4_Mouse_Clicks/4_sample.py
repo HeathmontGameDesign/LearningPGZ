@@ -29,14 +29,10 @@ def update():
     heath.y += move_y
 
     # If Heath goes off the screen, move him back to somewhere random
-    if heath.left < 0:
-        heath.left = random.randint(0, WIDTH)
-    if heath.right > WIDTH:
-        heath.right = random.randint(0, WIDTH)
-    if heath.top < 0:
-        heath.top = random.randint(0, HEIGHT)
-    if heath.bottom > HEIGHT:
-        heath.bottom = random.randint(0, HEIGHT)
+    if heath.left < 0 or heath.right > WIDTH:
+        heath.x = random.randint(0, WIDTH)
+    if heath.top < 0 or heath.bottom > HEIGHT:
+        heath.y = random.randint(0, HEIGHT)
 
 def draw():
     # As above, score is being used as a global variable
