@@ -9,14 +9,19 @@ HEIGHT = 600
 TITLE = '5 - Lists and Sounds'
 
 # Set the background color
-BGCOLOUR = (100, 100, 0)
+BGCOLOUR = (200, 100, 0)
 
-FIRE_SPEED = 5
+# FIRE_SPEED - Set it low to test, higher to play
+FIRE_SPEED = 3
 
-# Set the number of frames before a new enemy is created. Set it low to test, high to play
+# Set the number of frames before a new enemy is created. 
+# Set it low to test, high to play
 NEW_FIRE_AFTER = 500
 
+# Set the game to be PLAYING
 game_state = 'PLAYING'
+
+
 
 # Create the heath actor and place it at a random position
 heath = Actor('heath', (random.randint(0, WIDTH), random.randint(0, HEIGHT)))
@@ -26,8 +31,6 @@ coin = Actor('coin', (random.randint(0, WIDTH), random.randint(0, HEIGHT)))
 
 # Create the enemies list. This will hold all the fire actors
 enemies = []
-
-music.play('bg-music')
 
 # Creates a fire actor, places it at a random x, sets direction and adds to enemies list
 fire_1 = Actor('fire', (random.randint(0, WIDTH), 300))
@@ -47,7 +50,6 @@ def update():
             heath.x -= 5
         if keyboard.right:
             heath.x += 5
-
         # Move the heath actor up or down if the up or down arrow keys are pressed
         if keyboard.up:
             heath.y -= 5
@@ -58,6 +60,7 @@ def update():
         if heath.colliderect(coin):
             score += 1
             coin.x, coin.y = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
+            
 
         # Code to stop Heath going off the screen    
         if heath.left < 0:
@@ -85,8 +88,7 @@ def update():
                 enemy.direction = (enemy.direction[0], - enemy.direction[1])
             
             # TODO: Check if the heath actor has collided with an enemy
-            if heath.colliderect(enemy):
-                game_state = 'GAME_OVER'
+            
     
     # Check if the game is in the GAME_OVER state
     elif game_state == 'GAME_OVER':
@@ -101,7 +103,11 @@ def update():
         # Create a new enemy and add it
         new_fire = Actor('fire', (random.randint(0, WIDTH), random.randint(0, HEIGHT)))
         # Set the direction to be random, going in lots of different possible directions.
-        new_fire.direction = random.choice([(0, FIRE_SPEED), (0, -FIRE_SPEED), (FIRE_SPEED, 0), (-FIRE_SPEED, 0), (FIRE_SPEED, FIRE_SPEED)])
+        new_fire.direction = random.choice([(0, FIRE_SPEED), 
+                                            (0, -FIRE_SPEED), 
+                                            (FIRE_SPEED, 0), 
+                                            (-FIRE_SPEED, 0), 
+                                            (FIRE_SPEED, FIRE_SPEED)])
         enemies.append(new_fire)
         counter = 0
         
