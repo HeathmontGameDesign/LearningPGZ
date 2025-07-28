@@ -25,7 +25,7 @@ def update():
     # TODO: Add code to move the player up or down if the up or down arrow keys are pressed
 
     # TODO: Add code to move the ghost 1px to the right each frame
-    ghost.x += 1
+    
 
 def draw():
     # Set the background color before drawing the player
